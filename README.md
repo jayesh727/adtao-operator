@@ -21,6 +21,7 @@ conversation or a project's instructions.
 | `adtao-setup` | First time on an account, or when goals change |
 | `adtao-waste-hunter` | Wasted spend in search terms and placements |
 | `adtao-tracking-truth` | Are the conversion numbers real |
+| `adtao-launch` | Build a new Search campaign from evidence, created paused |
 | `adtao-competitors` | Who competes, what changed among them, angles to test |
 | `adtao-client-report` | The monthly report for a client, as a draft you edit |
 | `adtao-pmax-guard` | What AI Max, Performance Max and Google-made assets are doing |

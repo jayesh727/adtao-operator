@@ -22,6 +22,7 @@ AdTAO. Then answer what they asked.
 | Save goals, margins, who approves (first time, or when goals change) | `adtao-setup` |
 | Find wasted spend: search terms, placements, held negatives | `adtao-waste-hunter` |
 | Know whether the conversion numbers are real; set up tracking | `adtao-tracking-truth` |
+| Build a new Search campaign | `adtao-launch` |
 | Who the competitors are, what changed among them, angles to test | `adtao-competitors` |
 | The monthly client report or commentary | `adtao-client-report` |
 | What Google's automation did: AI Max, Performance Max placements, Google-made assets | `adtao-pmax-guard` |

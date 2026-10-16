@@ -2,7 +2,8 @@
 
 ## 0.2.0 (draft)
 
-- New skills: competitors, client report, PMax guard, author-skill.
+- New skills: launch, competitors, client report, PMax guard, author-skill.
+- A whole Search campaign can be staged as one change, created paused.
 - The plugin asks the server for the operator tool set, so only the skills' tools are listed.
 - New sitelinks, callouts and structured snippets can be staged for approval.
 
