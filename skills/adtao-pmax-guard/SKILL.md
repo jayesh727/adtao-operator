@@ -20,8 +20,9 @@ cost, and gives the user the switches back.
    served in the last 30 days and flags websites that behave badly across other advertisers.
 4. **Google-made assets.** `get_account_health` lists the assets Google made and is serving
    (`google_made_assets`), each with its link name and text.
-5. **Present** one table per area: what Google did · spend and conversions since · evidence · what
-   the user can do. Use each tool's own figures and verdicts.
+5. **Present** one table per area (AI Max, placements, Google-made assets), each with exactly these
+   columns: what Google did · spend and conversions since · evidence · what you can do. Use each
+   tool's own figures and verdicts; "not given" where a tool gave no figure.
 6. **Stage what the user picks**, each through `stage_manager_action` then house rules §6:
    - AI Max settings: `set_ai_max_campaign_settings` or `stage_ai_max_setting`; a landing page to
      keep AI Max off: `add_ai_max_url_exclusion`.
@@ -36,6 +37,11 @@ cost, and gives the user the switches back.
 ## Rules
 
 - AI Max is not judged on one day of expansions. Say which days the figures cover.
+- One count per thing: if two reads give different counts (campaigns, Performance Max campaigns),
+  say which read each comes from and why they differ, or use one.
+- Every table has the spend and conversions column; write "not given" where the tool gave none.
+- Anything about Google that no tool returned is general knowledge: mark it [TEST], or leave it out.
+- Plain words: "set up for approval", "Performance Max", "Google moved it to AI Max".
 - Pause Google-made assets; never remove them (removal cannot be undone by the user).
 - An experiment's readout (`get_ai_max_experiment_readout`) is the only place to say AI Max caused a
   result.

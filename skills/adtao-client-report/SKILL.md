@@ -26,7 +26,12 @@ the changes caused, unless an experiment measured it.
 
 ## Rules
 
-- "After", not "because", for any change and the result that followed it.
+- "After", not "because", for any change and the result that followed it. Do not tie this account's
+  own changes to the cross-account figures ("sit inside that pattern"); give them side by side.
+- Keep each count from the section that gave it: the change-history count and AdTAO's own record can
+  differ by a few, and the draft says so rather than mixing them.
+- No internal words in the draft: say "how changes like these went across accounts", not benchmark,
+  episode, fleet or ledger codes.
 - Show misses as plainly as wins.
 - Comparisons with similar accounts carry how many accounts they rest on; under 10, leave them out.
 - American English. No internal names, no references to AdTAO's own systems beyond "AdTAO".

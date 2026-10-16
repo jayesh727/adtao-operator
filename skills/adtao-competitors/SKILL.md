@@ -13,7 +13,8 @@ competitor an advertiser when it was only seen as a search result or map listing
 ## Steps
 
 1. **Freshness.** Call `get_competitor_landscape`. If it says no collection exists, or the newest
-   collection is more than 14 days old, call `refresh_competitor_data` once (it collects at most once a
+   collection is more than 14 days old (`newest_collection_days_old`; say it as "collected N days
+   ago"), call `refresh_competitor_data` once (it collects at most once a
    day per account) and tell the user the new collection lands later; answer from what is stored.
 2. **Who competes.** From the landscape: each competitor's share of the searched keywords, its usual
    position, how persistent it is (every, most, or some collections) and `seen_as`. Give the
@@ -23,8 +24,9 @@ competitor an advertiser when it was only seen as a search result or map listing
    onto more or fewer keywords, and text or price changes. A competitor missing from one keyword has
    not left.
 4. **Angles.** The landscape's `angles` are recurring themes in competitors' wording, with an example
-   and a test for the user's own ads. Copy the idea, never the words. Call an angle "common" when
-   several competitors use it and "persistent" when it shows up across collections; never "proven".
+   and a test for the user's own ads. Copy the idea, never the words. Use the tool's level: persistent
+   (a competitor kept it two weeks or more), common (three or more competitors), seen (one or two,
+   weak); never "proven".
 5. **Detail, if asked.** `get_competitor_elements` and `get_competitor_element_patterns` give the
    stored headlines and descriptions; `get_competitor_transparency_ads` gives ads from Google's Ads
    Transparency Center when any were gathered for the account.
@@ -34,9 +36,13 @@ competitor an advertiser when it was only seen as a search result or map listing
 ## Rules
 
 - Competitors are named by website, or by business name for a map listing that shows no website.
+- Say how old the newest collection is, in days ("collected 5 days ago"), not as a date.
+- A competitor seen only as a search result or map listing "shows" or "lists" wording; only one seen
+  as an ad "runs" an ad. Name whose ads the paid results were when there are any.
+- An angle's label must match its examples; rename it from the example if it does not.
 - The user's own site never appears as a competitor; if it does, say the collection mislabelled it.
-- Google's auction insights are not available through the Google Ads API for most accounts. Say so
-  when the user asks for impression share against named competitors.
+- Google's auction insights are not available through the Google Ads API for most accounts. Say that
+  (most accounts, not "this account") when the user asks for impression share against named competitors.
 
 ## Budget
 
