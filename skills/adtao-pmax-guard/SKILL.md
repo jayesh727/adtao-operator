@@ -29,6 +29,9 @@ cost, and gives the user the switches back.
    - Google-made text: `set_campaign_asset_automation` to stop new ones; `set_google_made_asset_status`
      with the link names to pause ones already serving.
    - Websites: the exclusion list from the placement risk read.
+   - A new asset group, when the user wants one: `create_asset_group` with its text, the ids of images
+     already in the account (add one first with `add_image_asset`) and optional search themes. It is
+     created paused; `enable_asset_group` turns it on as a separate change.
 
 ## Rules
 

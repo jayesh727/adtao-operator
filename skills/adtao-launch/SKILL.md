@@ -30,10 +30,11 @@ turning it on is a separate change the user approves.
    with a reason.
 7. **Show the user** the build as tables: ad groups with their keywords and the evidence for each,
    the ads, the negatives, the extensions, the budget and bidding, and every override.
-8. **Stage** it: one `stage_manager_action` with `build_search_campaign` and the build. A build that
-   departs from the playbook without a reason is refused with the rule it broke; fix it or add
-   the override. Then house rules §6 for the code. After it is created, offer `enable_campaign`
-   as a separate change.
+8. **Stage** it: one `stage_campaign_build` with the account and the build. A build that departs
+   from the playbook without a reason is refused with the rule it broke; fix it or add the
+   override. Then house rules §6 for the code. After it is created, offer `enable_campaign`
+   as a separate change, and an image for the ads with `add_image_asset` (field type AD_IMAGE)
+   if the user has one.
 
 ## Rules
 
@@ -51,4 +52,4 @@ one stage call, one approve call.
 
 `get_conversion_action_inventory`, `check_conversion_tags`, `get_keyword_gaps`,
 `get_fleet_term_evidence`, `get_evidence_led_negatives`, `get_competitor_landscape`,
-`stage_manager_action`, `approve_and_execute`.
+`stage_campaign_build`, `stage_manager_action`, `approve_and_execute`.
