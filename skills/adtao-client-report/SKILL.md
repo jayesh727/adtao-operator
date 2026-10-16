@@ -1,0 +1,41 @@
+---
+name: adtao-client-report
+description: Use when the user wants the monthly report or commentary for a client's Google Ads account. Drafts it from results, goals, who changed the account and how such changes went, what AdTAO did, and how the account compares with similar ones. Nothing is sent. Requires the AdTAO MCP server.
+---
+
+# Client report
+
+A draft for the user to edit and send themselves. It reports what happened after changes, not what
+the changes caused, unless an experiment measured it.
+
+## Steps
+
+1. **Context.** Read `account-context.yaml` if present: goal, approver, and which email addresses
+   belong to the agency and which to the client. Without it, say the "who changed it" section cannot
+   split agency from client staff.
+2. **Draft.** Call `narrate_client_report` for the account and month (default: the last complete
+   month). It returns the draft with a source on every figure.
+3. **Check.** If the user wants the figures behind a sentence, `build_client_report` returns the same
+   report as data. A section the tool says it could not read stays in the draft as "not available this
+   month", with its reason; never fill it in.
+4. **Who changed it.** For a fuller answer on AdTAO against Google's own suggestions and people's
+   changes, call `get_change_provenance_benchmark`. Quote a lane's figure only when the tool gives one
+   (it needs enough changes across enough accounts); otherwise say there are too few changes to compare.
+5. **Edit with the user.** Keep their wording where they change it. Keep every number as the tool
+   gave it, with its window.
+
+## Rules
+
+- "After", not "because", for any change and the result that followed it.
+- Show misses as plainly as wins.
+- Comparisons with similar accounts carry how many accounts they rest on; under 10, leave them out.
+- American English. No internal names, no references to AdTAO's own systems beyond "AdTAO".
+- Nothing is sent. The user sends it.
+
+## Budget
+
+1 to 3 calls: the draft, and optionally the data and the benchmark.
+
+## Tools
+
+`narrate_client_report`, `build_client_report`, `get_change_provenance_benchmark`.
