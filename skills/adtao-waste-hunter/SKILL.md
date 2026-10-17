@@ -18,9 +18,10 @@ from a dead one; AdTAO's cross-account evidence can.
    the proposed batch lists only the terms. Use each term's own figures; a term with no figure of
    its own is shown as "not broken out", never given a share of a total. For any term the user
    questions, `get_fleet_term_evidence` gives the detail.
-3. **Held negatives.** Call `get_negatives_watch_status`: terms held for a verdict earlier, now
-   `NOW_NEGATIVE` (enough new clicks, still no conversions), `KEEP_WATCHING` or `GRADUATED` (it
-   converted). Report NOW_NEGATIVE and GRADUATED first.
+3. **Held negatives.** Call `get_negatives_watch_status`: terms held for a verdict earlier. Say each
+   one's status in plain words: "now ready to exclude" (enough new clicks, still no conversions),
+   "still being watched", or "started converting, keep it". Report the ready-to-exclude and the
+   converting ones first.
 4. **Placements.** Call `get_account_placement_risk`. It reads where the ads served in the last 30
    days (display, video, Performance Max), flags websites that behave badly across other
    advertisers, and states which content and brand exclusions are in place. When it includes a
@@ -42,6 +43,10 @@ from a dead one; AdTAO's cross-account evidence can.
 ## Rules
 
 - A term converting for this account is never excluded on fleet evidence.
+- Every other term keeps the tool's own verdict. Do not change "add" to "watch" (or the reverse) on your
+  own judgement, and never say the house rules require a change they do not state.
+- A total you give is the tool's total for the terms you show; your own sums and monthly figures are
+  labelled "my estimate from the 90-day figure".
 - Phrase or exact match for negatives unless the user asks for broad.
 - Report spend in the account's currency, with the window (e.g. last 30 days).
 

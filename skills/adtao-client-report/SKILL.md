@@ -10,9 +10,10 @@ the changes caused, unless an experiment measured it.
 
 ## Steps
 
-1. **Context.** Read `account-context.yaml` if present: goal, approver, and which email addresses
-   belong to the agency and which to the client. Without it, say the "who changed it" section cannot
-   split agency from client staff.
+1. **Context.** If an `account-context.yaml` is in the working folder or was given to you, read it:
+   goal, approver, and which email addresses belong to the agency and which to the client. If none was
+   given, say "no account notes were provided" and that the "who changed it" section cannot split
+   agency from client staff.
 2. **Draft.** Call `narrate_client_report` for the account and month (default: the last complete
    month). It returns the draft with a source on every figure.
 3. **Check.** If the user wants the figures behind a sentence, `build_client_report` returns the same
@@ -28,6 +29,9 @@ the changes caused, unless an experiment measured it.
 
 - "After", not "because", for any change and the result that followed it. Do not tie this account's
   own changes to the cross-account figures ("sit inside that pattern"); give them side by side.
+- The cross-account comparison counts change groups (one per campaign and change window), not single
+  changes: never set it against this month's change count, and do not explain a gap between them.
+- Every figure about other accounts carries the number of accounts it rests on.
 - Keep each count from the section that gave it: the change-history count and AdTAO's own record can
   differ by a few, and the draft says so rather than mixing them.
 - No internal words in the draft: say "how changes like these went across accounts", not benchmark,

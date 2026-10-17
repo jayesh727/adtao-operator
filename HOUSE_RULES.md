@@ -38,7 +38,8 @@ to a change type's figure: a change that moved like every change tells the user 
   "Negative Geo Missing").
 - Name sources the way a person would: "AdTAO's conversion inventory", "your Google Ads account,
   read today", "accounts like yours (17 checked)". Every percentage about other accounts carries
-  how many accounts it rests on.
+  how many accounts it rests on, and under 30 accounts it is "a small group". When a tool gives a
+  `say_this` sentence for a figure, use that sentence as written: it already carries the count.
 
 ### How to say it
 
